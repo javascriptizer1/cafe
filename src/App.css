@@ -1,0 +1,512 @@
+.app {
+  margin: 5px;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 2fr 1.5fr 2fr;
+  grid-template-rows: 90vh;
+  grid-template-areas: "menu order menu_admin";
+}
+
+.menu {
+  grid-area: menu;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.order {
+  grid-area: order;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  overflow-y: auto;
+}
+
+.order_food {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.order_food > li {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.price_count {
+  font-weight: bold;
+  color: firebrick;
+}
+
+.order_name {
+  font-style: italic;
+}
+
+.deleteFood {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.totalSum {
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+
+.total_ruble > span {
+  font-weight: bold;
+}
+
+.orders {
+  list-style: none;
+}
+
+.shipping_sale {
+  font-size: 12px;
+  color: firebrick;
+  margin: 10px 0;
+}
+
+.nothing {
+  background-color: darkgray;
+  font-size: 14px;
+  margin: 20px 0;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.menu-admin {
+  grid-area: menu_admin;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  overflow-y: auto;
+}
+
+.header {
+  font-family: 'Roboto Mono', monospace;
+  background: url("https://avatars.mds.yandex.net/get-zen_doc/1581919/pub_5fb75ec0b543ac7480beda15_5fb7deeeffe1de7f5c88010b/scale_1200") center;
+  background-size: cover;
+}
+.header__rating {
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: coral;
+  border-radius: 9px;
+  padding: 5px;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+.header__rating > span {
+  font-size: 11px;
+  color: #c2ffd0;
+}
+
+.header__title {
+  text-align: center;
+}
+
+.header__title > h2 {
+  font-size: 30px;
+  color: #e5f5f0;
+  text-shadow: 2px 2px 18px #000, 2px 2px 18px #000;
+}
+
+.header__title > h3 {
+  display: inline;
+  font-size: 24px;
+  color: #e5f5f0;
+  text-shadow: 1px 1px 0 #000, -1px -1px 7px #000;
+}
+
+.header__title > span {
+  color: #ff0000;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 7px;
+  text-shadow: 1px 1px 0 #000, -1px -1px 7px #000;
+}
+
+.foods {
+  padding: 2px 10px;
+  margin: 30px 7px 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foods li {
+  min-height: 120px;
+  height: auto;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: aquamarine;
+  padding: 15px;
+}
+.menu-food {
+  min-height: 120px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.menu-food > button {
+  margin-top: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: crimson;
+  padding: 5px 5px;
+  transition: all .25s ease-in;
+  font-size: 14px;
+  color: #e5f5f0;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 5px;
+}
+
+.menu-food-top {
+  display: flex;
+  align-items: center;
+}
+
+.food-details {
+  font-size: 11px;
+  margin-left: 5px;
+  width: 100%;
+}
+
+.price_name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details__name {
+  font-size: 16px;
+}
+.details__price {
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+}
+.menu-food-top .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+}
+.menu-food-top .image > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.order h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.menu-admin > h3 {
+  text-align: center;
+}
+
+.edit_food {
+  border: 1px solid black;
+  padding: 10px;
+  width: 96%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  height: auto;
+}
+.edit_food input, select, textarea {
+  padding: 5px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.edit_food input:first-child {
+  margin-top: 0;
+}
+.edit_food > button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: crimson;
+  padding: 7px 5px;
+  transition: all .25s ease-in;
+  font-size: 14px;
+  color: #e5f5f0;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 5px;
+}
+
+.edit_food > button:hover {
+  background-color: #00a6ff;
+}
+
+.menu-admin > button {
+  align-self: flex-start;
+  width: 40%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  margin-left: 9px;
+  margin-bottom: 20px;
+  background-color: #b114dc;
+  padding: 10px 5px;
+  transition: all .25s ease-in;
+  font-size: 14px;
+  color: #e5f5f0;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 5px;
+}
+
+.menu-admin > button:hover {
+  background-color: #00a6ff;
+}
+
+.restaurant_select {
+  padding: 20px;
+  background-color: #e5f5f0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.restaurant_select_top {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.restaurant_select_top_header {
+  display: flex;
+  align-items: center;
+  font-size: 34px;
+  color: brown;
+  margin-right: 20px;
+}
+
+.arrow_picker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  color: brown;
+}
+
+.restaurant_select_bottom {
+  margin-top: 20px;
+}
+
+.restaurant_select_bottom > ul{
+  list-style: none;
+}
+
+.restaurant_select_bottom > ul > li {
+  font-size: 16px;
+  border-radius: 5px;
+  color: coral;
+  margin: 10px 0;
+  transition: all .25s ease;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.restaurant_select_bottom > ul > li:first-child {
+  margin-top: 0;
+}
+
+.restaurant_select_bottom > ul > li:hover {
+  background-color: lightblue;
+}
+
+.restaurant_select > button {
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  background-color: crimson;
+  padding: 10px 5px;
+  transition: all .25s ease-in;
+  font-size: 14px;
+  color: #e5f5f0;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 5px;
+}
+
+.restaurant_select > button:hover {
+  background-color: #00a6ff;
+}
+
+.login {
+  font-family: 'Roboto Mono', monospace;
+  height: 200px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.auth {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.login > h2 {
+  align-self: center;
+}
+
+.git > p, .anon > p {
+  font-size: 14px;
+}
+
+.login button {
+  cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-size: 12px;
+  transition: all .25s ease-in;
+  outline: none;
+}
+
+.github_btn {
+  margin-top: 7px;
+  background-color: cornflowerblue;
+}
+.github_btn:hover {
+  background-color: darkgray;
+}
+.anon {
+  display: flex;
+  align-items: center;
+}
+
+.anon > button {
+  font-size: 14px;
+  width: 30px;
+  background-color: transparent;
+  color: red;
+}
+
+.anon > button:hover {
+  color: blueviolet;
+}
+
+.login_header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid firebrick;
+}
+.avatar img {
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.btn_logout {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #b114dc;
+  transition: all .25s ease-in;
+  width: 70px;
+  height: 30px;
+}
+.btn_logout:hover {
+  background-color: lightcoral;
+}
+
+.edit_food_form {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 10px 0;
+}
+
+.edit_food_form input, select, textarea {
+  width: 100%;
+  padding: 5px;
+  margin: 2px 0;
+  border: none;
+  outline: none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.group_1 {
+  display: flex;
+  justify-content: space-between;
+}
+.group_1 > input {
+  width: 49.5%;
+}
+.delete_btn_edit {
+  border: none;
+  outline: none;
+  padding: 3px 5px;
+  font-size: 12px;
+  background-color: lightcoral;
+  transition: all .25s ease-in;
+  font-family: 'Roboto Mono', monospace;
+  color: #fff;
+}
+.delete_btn_edit:hover {
+  background-color: crimson;
+}
+
+@media (max-width: 589px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-areas: "menu"
+                          "order"
+                          "menu_admin";
+
+
+  }
+}
